@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/homeStyle.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script>
+        $(function(){
+            $('.center').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                    }
+                ]
+            });
+        })
+    </script> -->
+</head>
+<body>
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li>
+                    <a>
+                        <img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351">
+                        <div class="songs">
+                            <button class="songbtn 1" type="button" onclick="setChildValue(1)">
+                                ON/OFF
+                            </button>
+                            <button class="songbtn 2" type="button" onclick="setChildValue(2)">
+                                Difficult
+                            </button>
+                            <button class="songbtn 3" type="button" onclick="setChildValue(3)">
+                                If We Dream
+                            </button>
+                            <button class="songbtn 4" type="button" onclick="setChildValue(4)">
+                                Original
+                            </button>
+                            <button class="songbtn 5" type="button" onclick="setChildValue(5)">
+                                Cat's Waltz
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516">
+                        <div class="songs">
+                            <button class="songbtn 6" type="button" onclick="setChildValue(6)">
+                                Complete (널 만난 순간)
+                            </button>
+                            <button class="songbtn 7" type="button" onclick="setChildValue(7)">
+                                Fly Me To The Moon
+                            </button>
+                            <button class="songbtn 8" type="button" onclick="setChildValue(8)">
+                                아침 (Good Morning)
+                            </button>
+                            <button class="songbtn 9" type="button" onclick="setChildValue(9)">
+                                Fifty Fifty
+                            </button>
+                            <button class="songbtn 10" type="button" onclick="setChildValue(10)">
+                                나 말고 다 (Incomplete)
+                            </button>
+                            <button class="songbtn 11" type="button" onclick="setChildValue(11)">
+                                스물네 번 (86400)
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351">     
+                    </a>
+                </li>
+                <div class="slide-control">
+                    <div class="control01">
+                        <label for="slide03" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                    </div>
+                    <div class="control02">
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                    </div>
+                    <div class="control03">
+                        <label for="slide02" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="main">
+        <h1 class="title">타자연습</h1>
+        <i class="fas fa-chevron-left prev"></i>  
+        <i class="fas fa-chevron-right next"></i>
+        <div class="main-list">
+            <div class="items"><img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351"  class="slider-image"/></div>
+            <div class="items"><img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351"  class="slider-image"/></div>
+            <div class="items"><img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351"  class="slider-image"/></div>
+            <div class="items"><img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351"  class="slider-image"/></div>
+            <div class="items"><img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351"  class="slider-image"/></div>
+        </div>
+    </div> -->
+    
+    
+    <!-- <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div> -->
+    
+    <script src="js/home.js"></script>
+</html>
