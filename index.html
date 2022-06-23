@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taja Game</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+</head>
+<body>
+    <div class="header">
+        <h1>타자연습</h1>
+    </div>
+    <ul>
+        <li class="taja-list 1">
+            <div class="word-display">
+                <!-- Hello -->
+                <p></p>
+            </div>
+            <div class="word-input-box">
+                <input onkeyup="checkMatch();" type="text" class="word-input"/>
+            </div>
+        </li>
+        <li class="taja-list 2">
+            <div class="word-display">
+                <!-- Hello -->
+                <p></p>
+            </div>
+            <div class="word-input-box">
+                <input onkeyup="checkMatch();" type="text" class="word-input"/>
+            </div>
+        </li>
+        <li class="taja-list 3">
+            <div class="word-display">
+                <!-- Hello -->
+                <p></p>
+            </div>
+            <div class="word-input-box">
+                <input onkeyup="checkMatch();" type="text" class="word-input"/>
+            </div>
+        </li>
+        <li class="taja-list 4">
+            <div class="word-display">
+                <!-- Hello -->
+                <p></p>
+            </div>
+            <div class="word-input-box">
+                <input onkeyup="checkMatch();" type="text" class="word-input"/>
+            </div>
+        </li>
+    </ul>
+    
+    <!-- <div class="word-display line2">
+        
+        <p></p>
+    </div>
+    <div class="word-input-box input2">
+        <input onkeyup="checkMatch();" type="text" class="word-input"/>
+    </div>
+    <div class="word-display line3">
+        
+        <p></p>
+    </div>
+    <div class="word-input-box input3">
+        <input onkeyup="checkMatch();" type="text" class="word-input"/>
+    </div>
+    <div class="word-display line4">
+        
+        <p></p>
+    </div>
+    <div class="word-input-box input4">
+        <input onkeyup="checkMatch();" type="text" class="word-input"/>
+    </div> -->
+    <div class="game-info">
+        <div>
+            연습 시간: <span class="time m">0</span>분 <span class="time s">0</span>초
+        </div>
+        <div>
+            평균 타수: <span class="score">0</span>타
+        </div>
+        <div>
+            정확도: <span class="type-correct">0</span>%
+        </div>
+    </div>
+    <button class="button loading" onclick="run()">게임을 불러오는 중...</button>
+    <script src="json/onoff.json"></script>
+    <script src="json/complete.json"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
