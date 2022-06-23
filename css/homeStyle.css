@@ -59,6 +59,7 @@
 .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform: translateX(0%);}
 .section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-100%);}
 .section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-200%);}
+.section [id="slide04"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-300%);}
 
 .section .slide-control [class*="control"]{
     display: none;
@@ -66,3 +67,4 @@
 .section [id="slide01"]:checked ~ .slidewrap .control01{display: block;}
 .section [id="slide02"]:checked ~ .slidewrap .control02{display: block;}
 .section [id="slide03"]:checked ~ .slidewrap .control03{display: block;}
+.section [id="slide04"]:checked ~ .slidewrap .control04{display: block;}

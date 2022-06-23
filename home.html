@@ -8,49 +8,19 @@
     <link rel="stylesheet" href="css/homeStyle.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script>
-        $(function(){
-            $('.center').slick({
-                centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
-                responsive: [
-                    {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                    }
-                ]
-            });
-        })
-    </script> -->
 </head>
 <body>
     <div class="section">
         <input type="radio" name="slide" id="slide01" checked>
         <input type="radio" name="slide" id="slide02">
         <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
 
         <div class="slidewrap">
             <ul class="slidelist">
                 <li>
                     <a>
-                        <img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351">
+                        <img src="https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012">
                         <div class="songs">
                             <button class="songbtn 1" type="button" onclick="setChildValue(1)">
                                 ON/OFF
@@ -72,7 +42,7 @@
                 </li>
                 <li>
                     <a>
-                        <img src="https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516">
+                        <img src="https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515">
                         <div class="songs">
                             <button class="songbtn 6" type="button" onclick="setChildValue(6)">
                                 Complete (널 만난 순간)
@@ -97,7 +67,46 @@
                 </li>
                 <li>
                     <a>
-                        <img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351">     
+                        <img src="https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519">     
+                        <div class="songs">
+                            <button class="songbtn 12" type="button" onclick="setChildValue(12)">
+                                사랑하게 될 거야 (We Must Love)
+                            </button>
+                            <button class="songbtn 13" type="button" onclick="setChildValue(13)">
+                                Ice & Fire
+                            </button>
+                            <button class="songbtn 14" type="button" onclick="setChildValue(14)">
+                                별일 아냐 (Yayaya)
+                            </button>
+                            <button class="songbtn 15" type="button" onclick="setChildValue(15)">
+                                첫 사랑의 법칙 (Happily never after)
+                            </button>
+                            <button class="songbtn 16" type="button" onclick="setChildValue(16)">
+                                I Do
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519">     
+                        <div class="songs">
+                            <button class="songbtn 12" type="button" onclick="setChildValue(12)">
+                                사랑하게 될 거야 (We Must Love)
+                            </button>
+                            <button class="songbtn 13" type="button" onclick="setChildValue(13)">
+                                Ice & Fire
+                            </button>
+                            <button class="songbtn 14" type="button" onclick="setChildValue(14)">
+                                별일 아냐 (Yayaya)
+                            </button>
+                            <button class="songbtn 15" type="button" onclick="setChildValue(15)">
+                                첫 사랑의 법칙 (Happily never after)
+                            </button>
+                            <button class="songbtn 16" type="button" onclick="setChildValue(16)">
+                                I Do
+                            </button>
+                        </div>
                     </a>
                 </li>
                 <div class="slide-control">
@@ -111,6 +120,10 @@
                     </div>
                     <div class="control03">
                         <label for="slide02" class="left"></label>
+                        <label for="slide04" class="right"></label>
+                    </div>
+                    <div class="control04">
+                        <label for="slide03" class="left"></label>
                         <label for="slide01" class="right"></label>
                     </div>
                 </div>

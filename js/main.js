@@ -103,6 +103,21 @@ function getWords(){
     }else if(receivedData==="11"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.twentyfour
+    }else if(receivedData==="12"){
+        const songs = JSON.parse(JSON.stringify(albumList3));
+        words = songs.wemustlove
+    }else if(receivedData==="13"){
+        const songs = JSON.parse(JSON.stringify(albumList3));
+        words = songs.icefire
+    }else if(receivedData==="14"){
+        const songs = JSON.parse(JSON.stringify(albumList3));
+        words = songs.yayaya
+    }else if(receivedData==="15"){
+        const songs = JSON.parse(JSON.stringify(albumList3));
+        words = songs.happilyneverafter
+    }else if(receivedData==="16"){
+        const songs = JSON.parse(JSON.stringify(albumList3));
+        words = songs.ido
     }
     
     // axios.get('https://random-word-api.herokuapp.com/word?number=10')
