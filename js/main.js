@@ -118,24 +118,24 @@ function getWords(){
     }else if(receivedData==="16"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.ido
+    }else if(receivedData==="17"){
+        const songs = JSON.parse(JSON.stringify(albumList4));
+        words = songs.why
+    }else if(receivedData==="18"){
+        const songs = JSON.parse(JSON.stringify(albumList4));
+        words = songs.asteroid
+    }else if(receivedData==="19"){
+        const songs = JSON.parse(JSON.stringify(albumList4));
+        words = songs.allday
+    }else if(receivedData==="20"){
+        const songs = JSON.parse(JSON.stringify(albumList4));
+        words = songs.moscow
+    }else if(receivedData==="21"){
+        const songs = JSON.parse(JSON.stringify(albumList4));
+        words = songs.twinckle
     }
     
-    // axios.get('https://random-word-api.herokuapp.com/word?number=10')
-    //     .then(function (response) {
-    //         // handle success
-    //         response.data.forEach((word)=>{
-    //             if (word.length < 1) {
-    //                 words.push(word);
-    //             }
-    //         })
-    //         console.log(words)
-    //         //words = response.data;
-    //         buttonChange("게임시작");
-    //     })
-    //     .catch(function (error) {
-    //         // handle error
-    //         console.log(error);
-    //     })
+    
     //
     //
     //["하나하나하나","둘둘","셋"]//,"넷","다섯","여섯","일곱","여덟","아홉","열"];

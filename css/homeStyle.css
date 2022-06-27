@@ -1,3 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background: rgb(74, 110, 187);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
 .section input[id*="slide"]{
     display: none;
 }
@@ -27,7 +47,9 @@
 }
 
 .section .slidelist > li >a img{
-    width: 50%;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
 }
 
 .section .slidelist .songs{
