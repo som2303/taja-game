@@ -35,15 +35,19 @@ body {
 
 .section .slidelist > li {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: 100%;
     transition: all 0.5s;
+    padding: 10px;
 }
 
 .section .slidelist > li >a{
     display: block;
     position: relative;
     text-align: center;
+    /* align-items: center; */
+    /* width: 100%; */
+    padding:100px;
 }
 
 .section .slidelist > li >a img{
@@ -53,9 +57,24 @@ body {
 }
 
 .section .slidelist .songs{
+    /* white-space: nowrap; */
     display: flex;
     flex-direction: column;
     
+    /* width: 100%; */
+    padding: 20px;
+    margin: 50px;
+}
+
+.section .slidelist .songs button{
+    /* display: flex; */
+    /* white-space: nowrap; */
+    /* 
+    flex-direction: column; */
+    /* width:inherit; */
+    padding: 1rem;
+    margin: 10px;
+    cursor: pointer;
 }
 
 
@@ -113,3 +132,7 @@ body {
 .section [id="slide13"]:checked ~ .slidewrap .control13{display: block;}
 .section [id="slide14"]:checked ~ .slidewrap .control14{display: block;}
 .section [id="slide15"]:checked ~ .slidewrap .control15{display: block;}
+
+/* @viewport {
+    width : device-width;
+} */
