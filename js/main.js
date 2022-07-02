@@ -27,6 +27,10 @@ const button = document.querySelector('.button');
 const wordList = document.querySelectorAll(".taja-list");
 const receivedData = location.href.split('?')[1];
 
+const target = document.querySelectorAll('.btn_open');
+const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
+const popMessage = document.querySelector('.pop_message');
+
 init();
 // window.onkeydown = (e) => console.log(e);
 
@@ -35,6 +39,8 @@ init();
 function init(){
     buttonChange("게임 로딩중");
     getWords();
+    setText();
+
     // charIndex = 0;
     
     // wordInput.addEventListener('onkeydown', checkMatch);
@@ -48,7 +54,7 @@ function run()
     }
     isPlaying = true;
     
-    setText();
+    
     tajaNum = 0;
     // time = GAME_TIME;
     wordList[0].querySelector('.word-input').focus();
@@ -258,6 +264,7 @@ function checkMatch (){
             // console.log(mistakes);
         }
         if(nowIndex>=words.length){
+            openPopup()
             nowIndex=0;
             isPlaying=false;
 
@@ -315,6 +322,45 @@ function checkMatch (){
     scoreDisplay.innerText = Math.floor(tajaNum/time*60);
     typeCorrect.innerText = score.toFixed(1);
 }
+
+// const target = document.querySelectorAll('.btn_open');
+// const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
+let targetID;
+
+
+function openPopup(){
+    // timeDisplayM.innerText = Math.floor(time/60);
+    // timeDisplayS.innerText = time%60;
+    // scoreDisplay.
+    // targetID = this.getAttribute('href');
+    popMessage.innerText="연습시간: "+timeDisplayM.value+'분'
+    document.querySelector("#pop_info").style.display = 'block';
+}
+function closePopup(){
+    let thisUrl = document.URL;
+    let snsTitle = "2021 웹진 [봄]";
+    document.querySelector("#pop_info").style.display = 'none';
+    const url = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
+    window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
+    // window.location.href = `home.html`;
+}
+
+
+// 팝업 열기
+for(let i = 0; i < target.length; i++){
+    target[i].addEventListener('click', function(){
+        targetID = this.getAttribute('href');
+        popMessage.innerText="연습시간: "+timeDisplayM.innerText+'분'+timeDisplayS.innerText+'초\n'+"타자: "+scoreDisplay.innerText+"타\n"+"정확도: "+typeCorrect.innerText+"%"
+        document.querySelector(targetID).style.display = 'block';
+    });
+}
+
+// 팝업 닫기
+// for(let j = 0; j < target.length; j++){
+//     btnPopClose[j].addEventListener('click', function(){
+//         this.parentNode.parentNode.style.display = 'none';
+//     });
+// }
 
 
 
