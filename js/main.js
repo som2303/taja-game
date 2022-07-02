@@ -19,13 +19,18 @@ let tajaNum = 0;
 
 const wordInput = document.querySelector('.word-input');
 const wordDisplay = document.querySelector('.word-display p');
+const wordList = document.querySelectorAll(".taja-list");
+
+const titleDisplay = document.querySelector('.title');
 const scoreDisplay = document.querySelector('.score');
 const timeDisplayM = document.querySelector('.m');
 const timeDisplayS = document.querySelector('.s');
 const typeCorrect = document.querySelector('.type-correct');
 const button = document.querySelector('.button');
-const wordList = document.querySelectorAll(".taja-list");
+
 const receivedData = location.href.split('?')[1];
+const receivedData2 = location.href.split('?')[2];
+const albumImage = document.querySelector('.bgImage');
 
 const target = document.querySelectorAll('.btn_open');
 const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
@@ -40,7 +45,7 @@ function init(){
     buttonChange("게임 로딩중");
     getWords();
     setText();
-
+    paintImage(receivedData2);
     // charIndex = 0;
     
     // wordInput.addEventListener('onkeydown', checkMatch);
@@ -57,6 +62,7 @@ function run()
     
     tajaNum = 0;
     // time = GAME_TIME;
+    wordList[0].querySelector('.word-input').classList.add("click");
     wordList[0].querySelector('.word-input').focus();
     scoreDisplay.innerText = 0;
     mistakes = 0;
@@ -73,12 +79,28 @@ function checkStatus(){
     }
 }
 
+// const header = document.querySelector(".header");
+
+function paintImage(receive) {
+    let rink = "url('https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012')"
+    if (receive==='2'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515')"
+    }else if (receive==='3'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
+    }
+    // const image = new Image();
+    albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
+    // image.classList.add("bgImage"); // image에 bgImage 클래스 추가 
+    // header.appendChild(image); // body의 자식에 image추가
+}
+
 function getWords(){
     console.log(receivedData);
     // const data = fetch('../json/onoff.json');
     if(receivedData==="1"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.onoff
+        titleDisplay.innerText='ON/OFF'
     }else if(receivedData==="2"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.difficult
@@ -281,11 +303,13 @@ function checkMatch (){
             setText();
             num=0;
         }
+        nowInput.classList.remove("click");
         nowInput = wordList[num].querySelector('.word-input');
         nowText = wordList[num].querySelector('.word-display p');
         characters = nowText.querySelectorAll("span");
         charLength = nowInput.value.length - 1;
         nowInput.focus();
+        nowInput.classList.add("click");
         typedChar = nowInput.value.split("")[charIndex];
         characters[charIndex].classList.add("active");
         

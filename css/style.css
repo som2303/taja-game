@@ -1,67 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-ul{
-    list-style: none;
+    /* height: 100%; */
+    /* padding: 0.5rem; */
 }
 
 .header {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    width: 35vw;
+    height: 100vh;
     background: rgb(74, 110, 187);
     color: white;
     text-align: center;
     padding: 1rem;
 }
-
-.word-display{
-    margin-top: 1rem;
-    font-size: 20px;
-    color: grey;
-    /* text-align: justify;
-    word-break: break-all; */
+.name{
+    position: absolute;
+    top: 5vh;
+    font-size: 35px;
 }
 
-.word-display p span{
-    position: relative;
+.song-info{
+    position: absolute;
+    top: 15vh;
 }
 
-.word-display p span.correct {
-    color: cornflowerblue;
+.bgImage {
+    width: 18vw;
+    height: 40vh;
+    background: center center / 100% no-repeat;
 }
-.word-display p span.incorrect {
-    color: red;
-}
-.word-display p span.active {
-    color: pink;
-}
-.word-input-box {
-    margin-top: 1rem;
-}
-.word-input {
-    padding: 0.5rem;
-    width: 300px;
-}
+
 .game-info {
+    position: absolute;
+    bottom: 15vh;
     margin-top: 2rem;
     font-size: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
+    /* display: flex;
+    justify-content: space-between; */
+    width: 100%;
 }
 
-.time, .score, .type-correct {
+.title,
+.time,
+.score,
+.type-correct {
     font-size: 30px;
 }
+
 .button {
+    position: absolute;
+    bottom: 5vh;
     width: 200px;
     height: 35px;
     background: cornflowerblue;
@@ -70,7 +70,108 @@ ul{
     margin-top: 1rem;
     cursor: pointer;
 }
+.contents{
+    width: 100%;
+    margin: 2rem;
+}
+
+ul {
+    /* display: flex;
+    flex-direction:column; */
+    list-style: none;
+    /* justify-content: center;
+    align-items: center; */
+    /* align-items: center; */
+    
+    /* height: 100%; */
+    /* margin: 2rem; */
+}
+
+
+
+.word-display {
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: grey;
+    /* text-align: justify;
+    word-break: break-all; */
+}
+
+.word-display p span {
+    position: relative;
+}
+
+.word-display p span.correct {
+    color: cornflowerblue;
+}
+
+.word-display p span.incorrect {
+    color: red;
+}
+
+.word-display p span.active {
+    color: pink;
+}
+
+.word-input-box {
+    margin-top: 0.5rem;
+}
+
+.word-input {
+    pointer-events: none;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 20px;
+    word-spacing: 1.6px;
+}
+
+.click{
+    pointer-events:auto;
+}
+
+
+
+
+
 .loading {
-    background: grey;
-    cursor: not-allowed;
+    display: none;
+    /* background: grey;
+    cursor: not-allowed; */
+}
+
+.btn_open {
+    font-weight: bold;
+    margin: 5px;
+    padding: 4px 6px;
+    background: #000;
+    color: #fff;
+}
+
+.pop_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    font-size: 0;
+    text-align: center;
+}
+
+.pop_wrap:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+}
+
+.pop_wrap .pop_inner {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #fff;
+    width: 200px;
+    vertical-align: middle;
+    font-size: 15px;
 }
