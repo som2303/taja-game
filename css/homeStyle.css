@@ -9,33 +9,38 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    height: 10vh;
     background: rgb(240,239,234);
     color: white;
     text-align: center;
-    padding: 1rem;
+    z-index: 15;
+    padding: 1%;
 }
 
+.section{
+    margin-top: 15vh;
+    height: 100%;
+    /* height: 90vh; */
+}
 .section input[id*="slide"]{
     display: none;
 }
 
 .section .slidewrap{
-    max-width: 100vw;
-    
-    margin: 0px auto;
+    width: 100vw;
     overflow: hidden;
 }
 
 .section .slidelist{
     white-space: nowrap;
-    font-size: 0;
-    
-    /* padding: 0px; */
 }
 
 .section .slidelist > li {
@@ -43,88 +48,57 @@ body {
     vertical-align: top;
     width: 100%;
     transition: all 0.5s;
-    
-    /* padding: 10px; */
-    /* margin: 3rem; */
-    
 }
 
-/* .section .slidelist > li >a{ */
-    /* display: block; */
-    /* position: relative; */
-    /* text-align: center; */
-    
-    /* align-items: center; */
-    /* width: 100%; */
-    /* padding:100px; */
-/* } */
-
 .section .slidelist > li >a{
-    /* background-color: darksalmon; */
     display:flex;
-    position: relative;
+    flex-direction: column;
     text-align: center;
-    
-    
-    /* align-items: center; */
-    /* width: 100%; */
-    height: 100%;
-    margin: 10px 120px 10px;
-    padding:50px;
+    width: 80vw;
+    margin: 2vh 10vw 2vh;
 }
 
 
 
 .album{
     display:flex;
-    flex-direction: column;
-    /* position: absolute;
-    top: 20vh; */
+    margin: 0vh 11% 7vh;
     
 }
 
-.album > img{
-    
-    width: 240px;
-    height: 240px;
-    
-    /* object-fit: cover; */
+.album img{
+    width: 24vw;
+    height: 24vw;
+    margin-right: 3vw;
     background: center center / 100% no-repeat;
 }
 
-.album .name{
-    /* position: absolute;
-    top: 5vh; */
-    font-size: 35px;
+.name{
+    width: 60vw;
+    padding: 0 0 1vh;
+    margin: 7vh 10vw;
+    font-size: 8vh;
+    font-weight: 700;
+    border-bottom: 4px solid;
 }
 
 .section .slidelist .songs{
-    /* white-space: nowrap; */
     display: flex;
     flex-direction: column;
-    
-    width: 400px;
-    padding: 10px;
-    /* margin: 50px; */
 }
 
 .section .slidelist .songs button{
-    /* display: flex; */
-    /* white-space: nowrap; */
-    /* 
-    flex-direction: column; */
-    /* width:inherit; */
-    padding: 15px;
-    margin: 10px;
+    width: 35vw;
+    height: 4vw;
+    margin: 0 0 1vw;
     cursor: pointer;
-    font-size: 20px;
-    
-    /* outline-style:none; */
+    overflow:hidden;
+    font-weight: bold;
 }
 
 .onoff{
-    background-color: white;
-    border:2px solid rgb(252,185,19);
+    /* background-color: white; */
+    border:3px solid rgb(252,185,19);
 }
 .onoff button{
     background-color: rgb(252,185,19);
@@ -133,23 +107,62 @@ body {
     color: white;
 }
 
+.onoff .name{
+    border-color: rgb(252,185,19);
+    color: rgb(252,185,19);
+}
+
+.complete{
+    border: 3px solid rgb(181, 220, 253);
+}
+.complete button{
+    background-color: rgb(255,244,80);
+    /* outline-color: ; */
+    border:none;
+    color: rgb(0,115,208);
+}
+
+.complete .name{
+    border-color: rgb(0,115,208);
+    color: rgb(0,115,208);
+}
+
+.wemustlove{
+    border: 3px solid rgb(245,203,204);
+}
+
+.wemustlove button{
+    background-color: rgb(245,203,204);
+    /* outline-color: ; */
+    border:none;
+    color: rgb(129,114,124);
+}
+
+.wemustlove .name{
+    border-color: rgb(218,110,108);
+    color: rgb(218,110,108);
+}
+
+
 
 .section .slidelist label{
     position: absolute;
     z-index: 10;
     top: 50%;
     transform: translateY(-50%);
-    padding: 20px;
+    /* width: 5vw;
+    height: 5vw; */
+    padding: 3vh;
     cursor: pointer;
 }
 
 .section .left{
-    left: 30px;
+    left: 3vw;
     background: url('../img/left.png') center center / 100% no-repeat;
 }
 
 .section .right{
-    right: 30px;
+    right: 3vw;
     background: url('../img/right.png') center center / 100% no-repeat;
 }
 

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!-- <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body style="overflow-x: hidden">
@@ -38,32 +38,37 @@
             <ul class="slidelist">
                 <li>
                     <a class="onoff">
-                        <div class="album">
-                            <img src="https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012">
-                            <span class="name">ON/OFF</span>
+                        <div class="name">
+                            <span>ON/OFF</span>
                         </div>
-                        
+                        <div class="album">
+                        <img src="https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012">
                         <div class="songs">
-                            <button class="songbtn 1" type="button" onclick="setChildValue(1,1)">
+                            <button class="songbtn 1" type="button" onclick="setChildValue('onoff',1)">
                                 ON/OFF
                             </button>
-                            <button class="songbtn 2" type="button" onclick="setChildValue(2,1)">
+                            <button class="songbtn 2" type="button" onclick="setChildValue('difficult',1)">
                                 Difficult
                             </button>
-                            <button class="songbtn 3" type="button" onclick="setChildValue(3,1)">
+                            <button class="songbtn 3" type="button" onclick="setChildValue('ifwedream',1)">
                                 If We Dream
                             </button>
-                            <button class="songbtn 4" type="button" onclick="setChildValue(4,1)">
+                            <button class="songbtn 4" type="button" onclick="setChildValue('original',1)">
                                 Original
                             </button>
-                            <button class="songbtn 5" type="button" onclick="setChildValue(5,1)">
+                            <button class="songbtn 5" type="button" onclick="setChildValue('catswaltz',1)">
                                 Cat's Waltz
                             </button>
+                        </div>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a class="complete">
+                        <div class="name">
+                            <span>YOU COMPLETE ME</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515">
                         <div class="songs">
                             <button class="songbtn 6" type="button" onclick="setChildValue(6,2)">
@@ -85,10 +90,15 @@
                                 스물네 번 (86400)
                             </button>
                         </div>
+                    </div>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a class="wemustlove">
+                        <div class="name">
+                            <span>WE MUST LOVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(12,3)">
@@ -107,32 +117,42 @@
                                 I Do
                             </button>
                         </div>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <img src="https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516">     
-                        <div class="songs">
-                            <button class="songbtn 12" type="button" onclick="setChildValue(17,4)">
-                                Why
-                            </button>
-                            <button class="songbtn 13" type="button" onclick="setChildValue(18,4)">
-                                소행성 (Asteroid)
-                            </button>
-                            <button class="songbtn 14" type="button" onclick="setChildValue(19,4)">
-                                억X억 (All Day)
-                            </button>
-                            <button class="songbtn 15" type="button" onclick="setChildValue(20,4)">
-                                Moscow Moscow
-                            </button>
-                            <button class="songbtn 16" type="button" onclick="setChildValue(21,4)">
-                                Twinkle Twinkle
-                            </button>
+                    <a class="golive">
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
+                            <img src="https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516">     
+                            <div class="songs">
+                                <button class="songbtn 12" type="button" onclick="setChildValue(17,4)">
+                                    Why
+                                </button>
+                                <button class="songbtn 13" type="button" onclick="setChildValue(18,4)">
+                                    소행성 (Asteroid)
+                                </button>
+                                <button class="songbtn 14" type="button" onclick="setChildValue(19,4)">
+                                    억X억 (All Day)
+                                </button>
+                                <button class="songbtn 15" type="button" onclick="setChildValue(20,4)">
+                                    Moscow Moscow
+                                </button>
+                                <button class="songbtn 16" type="button" onclick="setChildValue(21,4)">
+                                    Twinkle Twinkle
+                                </button>
+                            </div>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a>
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(22,5)">
@@ -157,10 +177,15 @@
                                 신세계 (SPIN OFF Ver.)
                             </button>
                         </div>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a>
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(27,6)">
@@ -197,10 +222,15 @@
                                 Lights On (2021 Ver.) (CD Only)
                             </button>
                         </div>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a>
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(33,7)">
@@ -246,10 +276,15 @@
                                 Lights On (2021 Ver.) (CD Only)
                             </button>
                         </div>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a>
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(47,8)">
@@ -268,10 +303,15 @@
                                 여름의 끝 (Summer End)
                             </button>
                         </div>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a>
+                        <div class="name">
+                            <span>GO LIVE</span>
+                        </div>
+                        <div class="album">
                         <img src="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351">     
                         <div class="songs">
                             <button class="songbtn 12" type="button" onclick="setChildValue(52,9)">
@@ -289,6 +329,7 @@
                             <button class="songbtn 16" type="button" onclick="setChildValue(56,9)">
                                 Show Must Go On
                             </button>
+                        </div>
                         </div>
                     </a>
                 </li>

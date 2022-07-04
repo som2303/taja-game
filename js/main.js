@@ -11,7 +11,7 @@ let checkInterval;
 let words = [];
 let charIndex = 0;
 let mistakes = 0;
-let notMistakes = 0;
+let allWords = 0;
 let wordsIndex = 0;
 let nowIndex = 0;
 let num = 0;
@@ -30,11 +30,14 @@ const button = document.querySelector('.button');
 
 const receivedData = location.href.split('?')[1];
 const receivedData2 = location.href.split('?')[2];
-const albumImage = document.querySelector('.bgImage');
+const albumImage = document.querySelector('.bg-image');
 
 const target = document.querySelectorAll('.btn_open');
 const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
 const popMessage = document.querySelector('.pop_message');
+
+const header = document.querySelector('.header');
+const contents = document.querySelector('.contents');
 
 init();
 // window.onkeydown = (e) => console.log(e);
@@ -66,7 +69,7 @@ function run()
     wordList[0].querySelector('.word-input').focus();
     scoreDisplay.innerText = 0;
     mistakes = 0;
-    notMistakes = 0;
+    allWords = 0;
     timeInterval = setInterval(countDown, 1000);
     checkInterval = setInterval(checkStatus, 50);
     buttonChange("게임 중");
@@ -85,8 +88,12 @@ function paintImage(receive) {
     let rink = "url('https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012')"
     if (receive==='2'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515')"
+        header.classList.add("complete");
+        contents.classList.add("complete-text");
     }else if (receive==='3'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
     }
     // const image = new Image();
     albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
@@ -97,25 +104,30 @@ function paintImage(receive) {
 function getWords(){
     console.log(receivedData);
     // const data = fetch('../json/onoff.json');
-    if(receivedData==="1"){
+    if(receivedData==="onoff"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.onoff
         titleDisplay.innerText='ON/OFF'
-    }else if(receivedData==="2"){
+    }else if(receivedData==="difficult"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.difficult
-    }else if(receivedData==="3"){
+        titleDisplay.innerText='Difficult'
+    }else if(receivedData==="ifwedream"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.ifwedream
-    }else if(receivedData==="4"){
+        titleDisplay.innerText='If We Dream'
+    }else if(receivedData==="original"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.original
-    }else if(receivedData==="5"){
+        titleDisplay.innerText='Original'
+    }else if(receivedData==="catswaltz"){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.catswaltz
+        titleDisplay.innerText='Cat\'s Waltz'
     }else if(receivedData==="6"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.complete
+        titleDisplay.innerText='Complete\n(널 만난 순간)'
     }else if(receivedData==="7"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.flymetothemoon
@@ -134,6 +146,7 @@ function getWords(){
     }else if(receivedData==="12"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.wemustlove
+        titleDisplay.innerText='사랑하게 될 거야\n(We Must Love)'
     }else if(receivedData==="13"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.icefire
@@ -242,7 +255,7 @@ function checkMatch (){
                     mistakes--;
                     
                 }
-                notMistakes--;
+                allWords--;
             }
             characters[charIndex].classList.remove("correct", "incorrect");
             
@@ -255,10 +268,10 @@ function checkMatch (){
             if(charIndex!=charLength){
                 if(characters[charIndex].innerText === typedChar){
                     characters[charIndex].classList.add("correct");
-                    notMistakes++;
+                    allWords++;
                 }else{
                     mistakes++;
-                    notMistakes++;
+                    allWords++;
                     characters[charIndex].classList.add("incorrect");
                     // console.log(mistakes);
                 }
@@ -278,10 +291,10 @@ function checkMatch (){
         characters[charIndex].classList.remove("correct", "incorrect","active");
         if(characters[charIndex].innerText === typedChar){
             characters[charIndex].classList.add("correct");
-            notMistakes++;
+            allWords++;
         }else{
             mistakes++;
-            notMistakes++;
+            allWords++;
             characters[charIndex].classList.add("incorrect");
             // console.log(mistakes);
         }
@@ -332,7 +345,7 @@ function checkMatch (){
                     mistakes--;
                     
                 }
-                notMistakes--;
+                allWords--;
             }
             
             //console.log(charIndex)
@@ -340,8 +353,8 @@ function checkMatch (){
         }
         
     }
-    notMistakes === 0 ? score=0:score=(notMistakes-mistakes)/notMistakes*100;
-    // score=(notMistakes-mistakes)/notMistakes*100;
+    allWords === 0 ? score=0:score=(allWords-mistakes)/allWords*100;
+    // score=(allWords-mistakes)/allWords*100;
     console.log(tajaNum, mistakes)
     scoreDisplay.innerText = Math.floor(tajaNum/time*60);
     typeCorrect.innerText = score.toFixed(1);
