@@ -124,25 +124,30 @@ function getWords(){
         const songs = JSON.parse(JSON.stringify(albumList1));
         words = songs.catswaltz
         titleDisplay.innerText='Cat\'s Waltz'
-    }else if(receivedData==="6"){
+    }else if(receivedData==="complete"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.complete
         titleDisplay.innerText='Complete\n(널 만난 순간)'
-    }else if(receivedData==="7"){
+    }else if(receivedData==="flymetothemoon"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.flymetothemoon
-    }else if(receivedData==="8"){
+        titleDisplay.innerText='Fly Me To\nThe Moon'
+    }else if(receivedData==="goodmorning"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.goodmorning
-    }else if(receivedData==="9"){
+        titleDisplay.innerText='아침\n(Good Morning)'
+    }else if(receivedData==="fiftyfifty"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.fiftyfifty
-    }else if(receivedData==="10"){
+        titleDisplay.innerText='Fifty Fifty'
+    }else if(receivedData==="incomplete"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.incomplete
-    }else if(receivedData==="11"){
+        titleDisplay.innerText='나 말고 다\n(Incomplete)'
+    }else if(receivedData==="twentyfour"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.twentyfour
+        titleDisplay.innerText='스물네 번 (86400)'
     }else if(receivedData==="12"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.wemustlove
