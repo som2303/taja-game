@@ -148,22 +148,26 @@ function getWords(){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.twentyfour
         titleDisplay.innerText='스물네 번 (86400)'
-    }else if(receivedData==="12"){
+    }else if(receivedData==="wemustlove"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.wemustlove
         titleDisplay.innerText='사랑하게 될 거야\n(We Must Love)'
-    }else if(receivedData==="13"){
+    }else if(receivedData==="icefire"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.icefire
-    }else if(receivedData==="14"){
+        titleDisplay.innerText='Ice & Fire'
+    }else if(receivedData==="yayaya"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.yayaya
-    }else if(receivedData==="15"){
+        titleDisplay.innerText='별일 아냐\n(Yayaya)'
+    }else if(receivedData==="happilyneverafter"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.happilyneverafter
-    }else if(receivedData==="16"){
+        titleDisplay.innerText='첫 사랑의 법칙\n(Happily never after)'
+    }else if(receivedData==="ido"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.ido
+        titleDisplay.innerText='I Do'
     }else if(receivedData==="17"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.why
