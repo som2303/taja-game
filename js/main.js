@@ -94,6 +94,30 @@ function paintImage(receive) {
         rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
         header.classList.add("wemustlove");
         contents.classList.add("wemustlove-text");
+    }else if (receive==='4'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
+    }else if (receive==='5'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
+    }else if (receive==='6'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
+    }else if (receive==='7'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
+    }else if (receive==='8'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
+    }else if (receive==='9'){
+        rink="url('https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351')"
+        header.classList.add("wemustlove");
+        contents.classList.add("wemustlove-text");
     }
     // const image = new Image();
     albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
@@ -168,26 +192,175 @@ function getWords(){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.ido
         titleDisplay.innerText='I Do'
-    }else if(receivedData==="17"){
+    }else if(receivedData==="why"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.why
-    }else if(receivedData==="18"){
+        titleDisplay.innerText='Why'
+    }else if(receivedData==="asteroid"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.asteroid
-    }else if(receivedData==="19"){
+        titleDisplay.innerText='소행성 (Asteroid)'
+    }else if(receivedData==="allday"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.allday
-    }else if(receivedData==="20"){
+        titleDisplay.innerText='억X억 (All Day)'
+    }else if(receivedData==="moscow"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.moscow
-    }else if(receivedData==="21"){
+        titleDisplay.innerText='Moscow Moscow'
+    }else if(receivedData==="twinckle"){
         const songs = JSON.parse(JSON.stringify(albumList4));
         words = songs.twinckle
+        titleDisplay.innerText='Twinkle Twinkle'
+    }else if(receivedData==="sukhumvit"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.sukhumvit
+        titleDisplay.innerText='스쿰빗스위밍\n(Sukhumvit Swimming)'
+    }else if(receivedData==="belleepoque"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.belleepoque
+        titleDisplay.innerText='첫 키스의 법칙\n(Belle Epoque)'
+    }else if(receivedData==="geppeto"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.geppeto
+        titleDisplay.innerText='제페토 (Geppeto)'
+    }else if(receivedData==="good"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.good
+        titleDisplay.innerText='오늘 뭐 할래\n(Good Good)'
+    }else if(receivedData==="cactus"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.cactus
+        titleDisplay.innerText='선인장 (Cactus)'
+    }else if(receivedData==="message"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.message
+        titleDisplay.innerText='Message'
+    }else if(receivedData==="newworld"){
+        const songs = JSON.parse(JSON.stringify(albumList5));
+        words = songs.newworld
+        titleDisplay.innerText='신세계\n(SPIN OFF Ver.)'
+    }else if(receivedData==="beautiful"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.beautiful
+        titleDisplay.innerText='Beautiful Beautiful'
+    }else if(receivedData==="mynameis"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.mynameis
+        titleDisplay.innerText='My Name Is'
+    }else if(receivedData==="thermometer"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.thermometer
+        titleDisplay.innerText='온도차 (Thermometer)\n(ON Team Ver.)'
+    }else if(receivedData==="secrettriangle"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.secrettriangle
+        titleDisplay.innerText='비밀 (Secret Triangle)\n(OFF Team Ver.)'
+    }else if(receivedData==="therealist"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.therealist
+        titleDisplay.innerText='The Realist'
+    }else if(receivedData==="onyou"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.onyou
+        titleDisplay.innerText='On-You (Interlude)'
+    }else if(receivedData==="tripadvisor"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.tripadvisor
+        titleDisplay.innerText='누워서 세계 속으로\n(Trip Advisor)'
+    }else if(receivedData==="feedback"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.feedback
+        titleDisplay.innerText='Feedback'
+    }else if(receivedData==="ifilu"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.ifilu
+        titleDisplay.innerText='첫 사랑의 법칙\n(Happily never after)'
+    }else if(receivedData==="beautifuleng"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.beautifuleng
+        titleDisplay.innerText='Beautiful Beautiful\n(English Ver.)'
+    }else if(receivedData==="lightson2021"){
+        const songs = JSON.parse(JSON.stringify(albumList6));
+        words = songs.lightson2021
+        titleDisplay.innerText='Lights On (2021 Ver.)\n(CD Only)'
+    }else if(receivedData==="uglydance"){
+        const songs = JSON.parse(JSON.stringify(albumList7));
+        words = songs.uglydance
+        titleDisplay.innerText='춤춰 (Ugly Dance)'
+    }else if(receivedData==="mygenesis"){
+        const songs = JSON.parse(JSON.stringify(albumList7));
+        words = songs.mygenesis
+        titleDisplay.innerText='My Genesis (Übermensch)'
+    }else if(receivedData==="thedreamer"){
+        const songs = JSON.parse(JSON.stringify(albumList7));
+        words = songs.thedreamer
+        titleDisplay.innerText='The Dreamer'
+    }else if(receivedData==="popping"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.popping
+        titleDisplay.innerText='여름 쏙 (Popping)'
+    }else if(receivedData==="summerpoem"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summerpoem
+        titleDisplay.innerText='여름 시 (Summer Poem)'
+    }else if(receivedData==="summershape"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summershape
+        titleDisplay.innerText='여름의 모양 (Summer Shape)'
+    }else if(receivedData==="dryice"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.dryice
+        titleDisplay.innerText='여름의 온도 (Dry Ice)'
+    }else if(receivedData==="summerend"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summerend
+        titleDisplay.innerText='여름의 끝 (Summer End)'
+    }else if(receivedData==="popping"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.popping
+        titleDisplay.innerText='여름 쏙 (Popping)'
+    }else if(receivedData==="summerpoem"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summerpoem
+        titleDisplay.innerText='여름 시 (Summer Poem)'
+    }else if(receivedData==="summershape"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summershape
+        titleDisplay.innerText='여름의 모양 (Summer Shape)'
+    }else if(receivedData==="dryice"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.dryice
+        titleDisplay.innerText='여름의 온도 (Dry Ice)'
+    }else if(receivedData==="summerend"){
+        const songs = JSON.parse(JSON.stringify(albumList8));
+        words = songs.summerend
+        titleDisplay.innerText='여름의 끝 (Summer End)'
+    }else if(receivedData==="goosebumps"){
+        const songs = JSON.parse(JSON.stringify(albumList9));
+        words = songs.goosebumps
+        titleDisplay.innerText='Goosebumps'
+    }else if(receivedData==="whistle"){
+        const songs = JSON.parse(JSON.stringify(albumList9));
+        words = songs.whistle
+        titleDisplay.innerText='Whistle'
+    }else if(receivedData==="fatandsugar"){
+        const songs = JSON.parse(JSON.stringify(albumList9));
+        words = songs.fatandsugar
+        titleDisplay.innerText='Fat and Sugar'
+    }else if(receivedData==="alarm"){
+        const songs = JSON.parse(JSON.stringify(albumList9));
+        words = songs.alarm
+        titleDisplay.innerText='Alarm'
+    }else if(receivedData==="showmustgoon"){
+        const songs = JSON.parse(JSON.stringify(albumList9));
+        words = songs.showmustgoon
+        titleDisplay.innerText='Show Must Go On'
     }
     
     
-    //
-    //
+    
+    
     //["하나하나하나","둘둘","셋"]//,"넷","다섯","여섯","일곱","여덟","아홉","열"];
     buttonChange('게임시작');
 }
@@ -288,8 +461,6 @@ function checkMatch (){
             }
             
         }
-        
-        // console.log("ㅁ",charIndex)
         characters.forEach(span => span.classList.remove("active")); //지나간 부분 active를 다 지우고
         characters[charIndex].classList.add("active")
     }else if (window.event.key === 'Enter'){
