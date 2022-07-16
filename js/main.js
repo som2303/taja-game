@@ -96,28 +96,28 @@ function paintImage(receive) {
         contents.classList.add("wemustlove-text");
     }else if (receive==='4'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("golive");
+        contents.classList.add("golive-text");
     }else if (receive==='5'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("spinoff");
+        contents.classList.add("spinoff-text");
     }else if (receive==='6'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("myname");
+        contents.classList.add("myname-text");
     }else if (receive==='7'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("cityofonf");
+        contents.classList.add("cityofonf-text");
     }else if (receive==='8'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("popping");
+        contents.classList.add("popping-text");
     }else if (receive==='9'){
         rink="url('https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
+        header.classList.add("goosebumps");
+        contents.classList.add("goosebumps-text");
     }
     // const image = new Image();
     albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정

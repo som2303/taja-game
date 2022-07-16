@@ -143,6 +143,107 @@ body {
     color: rgb(218,110,108);
 }
 
+.golive{
+    background-color: #f8f8f8;
+    border: 3px solid rgb(5, 5, 5);
+}
+
+.golive button{
+    background-color: rgb(5, 5, 5);
+    /* outline-color: ; */
+    border:none;
+    color: white;
+}
+
+.golive .name{
+    border-color: rgb(5, 5, 5);
+    color: rgb(5, 5, 5);
+}
+
+.spinoff{
+    /* background-color: #f8f8f8; */
+    border: 3px solid #cdbbb2;
+}
+
+.spinoff button{
+    background-color: #cdbbb2;
+    /* outline-color: ; */
+    border:none;
+    color: rgb(0, 0, 0);
+}
+
+.spinoff .name{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.myname{
+    /* background-color: #f8f8f8; */
+    border: 3px solid #e74930;
+}
+
+.myname button{
+    background-color: #e74930;
+    /* outline-color: ; */
+    border:none;
+    color: rgb(0, 0, 0);
+}
+
+.myname .name{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.cityofonf{
+    /* background-color: #f8f8f8; */
+    border: 3px solid #4048a9;
+}
+
+.cityofonf button{
+    background-color: #4048a9;
+    /* outline-color: ; */
+    border:none;
+    color: white;
+}
+
+.cityofonf .name{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.popping{
+    /* background-color: #f8f8f8; */
+    border: 3px solid #69c7f1;
+}
+
+.popping button{
+    background-color: #69c7f1;
+    /* outline-color: ; */
+    border:none;
+    color: white;
+}
+
+.popping .name{
+    border-color: #69c7f1;
+    color: #69c7f1;
+}
+
+.goosebumps{
+    background-color: rgb(0, 0, 0);
+    border: 3px solid #a0a0a1;
+}
+
+.goosebumps button{
+    background-color: #a0a0a1;
+    /* outline-color: ; */
+    border:none;
+    color: white;
+}
+
+.goosebumps .name{
+    border-color: #a0a0a1;
+    color: #a0a0a1;
+}
 
 
 .section .slidelist label{

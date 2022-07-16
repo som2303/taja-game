@@ -77,7 +77,7 @@ body {
     /* margin-top: 1rem; */
     cursor: pointer;
     font-size: 3vh;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .complete{
@@ -105,6 +105,29 @@ body {
     background: rgb(245,203,204);
     color: rgb(218,110,108);
 }
+
+.golive{
+    background: rgb(5, 5, 5);
+    color: rgb(255,255,255);
+    box-shadow: none;
+    /* border-right: 2px solid rgb(245,203,204); */
+}
+
+/* .golive .title{
+    font-size:3.5vh;
+} */
+
+.golive .button{
+    background: rgb(5, 5, 5);
+    color: rgb(255,255,255);
+    /* transition: all 0.2s ease-in-out;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s; */
+}
+
+
 
 .contents{
     width: 100%;
@@ -196,6 +219,26 @@ ul {
 }
 
 .wemustlove-text .word-input {
+    border:1.5px solid rgb(129,114,124);
+}
+
+.golive-text .word-display{
+    color: rgb(129,114,124);
+}
+
+.golive-text .word-display span.correct{
+    color: rgb(5, 5, 5);
+}
+
+.golive-text .word-display p span.incorrect {
+    color: rgb(218,110,108);
+}
+
+.golive-text .word-display p span.active {
+    color: rgb(245,203,204);
+}
+
+.golive-text .word-input {
     border:1.5px solid rgb(129,114,124);
 }
 
