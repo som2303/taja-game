@@ -195,20 +195,21 @@ body {
 }
 
 .cityofonf{
+    background-color: #4048a9;
     /* background-color: #f8f8f8; */
-    border: 3px solid #4048a9;
+    border: 4px solid #000;
 }
 
 .cityofonf button{
     background-color: #4048a9;
     /* outline-color: ; */
-    border:none;
-    color: white;
+    border:3px solid #000;
+    color: #000;
 }
 
 .cityofonf .name{
-    border-color: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    border-color: #000;
+    color: #000;
 }
 
 .popping{
