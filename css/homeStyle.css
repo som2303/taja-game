@@ -279,12 +279,12 @@ body {
 .section [id="slide07"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-600%);}
 .section [id="slide08"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-700%);}
 .section [id="slide09"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-800%);}
-.section [id="slide10"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-900%);}
+/* .section [id="slide10"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-900%);}
 .section [id="slide11"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1000%);}
 .section [id="slide12"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1100%);}
 .section [id="slide13"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1200%);}
 .section [id="slide14"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1300%);}
-.section [id="slide15"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1400%);}
+.section [id="slide15"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-1400%);} */
 
 
 .section .slide-control [class*="control"]{
@@ -299,12 +299,12 @@ body {
 .section [id="slide07"]:checked ~ .slidewrap .control07{display: block;}
 .section [id="slide08"]:checked ~ .slidewrap .control08{display: block;}
 .section [id="slide09"]:checked ~ .slidewrap .control09{display: block;}
-.section [id="slide10"]:checked ~ .slidewrap .control10{display: block;}
+/* .section [id="slide10"]:checked ~ .slidewrap .control10{display: block;}
 .section [id="slide11"]:checked ~ .slidewrap .control11{display: block;}
 .section [id="slide12"]:checked ~ .slidewrap .control12{display: block;}
 .section [id="slide13"]:checked ~ .slidewrap .control13{display: block;}
 .section [id="slide14"]:checked ~ .slidewrap .control14{display: block;}
-.section [id="slide15"]:checked ~ .slidewrap .control15{display: block;}
+.section [id="slide15"]:checked ~ .slidewrap .control15{display: block;} */
 
 /* @viewport {
     width : device-width;
