@@ -96,6 +96,45 @@ body {
     font-weight: bold;
 }
 
+@media all and (max-device-aspect-ratio:5/4) {
+    .name{
+        margin: 5vh 10vw 3vh 10vw;
+        /* padding: 0 0 0vh; */
+        font-size: 5vw;
+    }
+    .album{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin: 0vh 11% 7vh; */
+        
+    }
+
+    .album img{
+        width: 35vw;
+        height: 35vw;
+        margin-right: 0;
+        margin-bottom: 3vh;
+        /* background: center center / 100% no-repeat; */
+    }
+
+    .section .slidelist .songs button{
+        width: 60vw;
+        height: 7vw;
+        margin: 0 0 1vw;
+        font-size: 25px;
+        /* cursor: pointer;
+        overflow:hidden;
+        font-weight: bold; */
+    }
+
+    .section .slidelist label{
+        width: 10px;
+        height: 10px;
+    }
+} 
+
+
 .onoff{
     /* background-color: white; */
     border:3px solid rgb(252,185,19);
