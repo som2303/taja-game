@@ -55,7 +55,7 @@ body {
     font-size: 3vh;
     /* display: flex;
     justify-content: space-between; */
-    width: 100%;
+    width: fit-content;
 }
 
 .title,
@@ -78,6 +78,68 @@ body {
     cursor: pointer;
     font-size: 3vh;
     font-weight: 700;
+}
+
+@media all and (max-device-aspect-ratio:5/4) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        /* padding: 0.5rem; */
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items:; */
+    
+        width: 100%;
+        height:fit-content;
+        text-align: center;
+        padding: 2% 2vw 2%;
+        /* font-size: 1vw; */
+    }
+
+    .song-info{
+        position: relative;
+    }
+
+    .name{
+        position: relative;
+        font-size: 5vw;
+    }
+
+    .bg-image{
+        width: 0;
+        height: 0;
+    }
+
+    .game-info {
+        position:relative;
+        font-size: 3vw;
+        text-align: right;
+        padding:0 2vw 0;
+        /* display: flex;
+        flex-direction: row; */
+    }
+
+    .button {
+        position: relative;
+        font-size: 3vw;
+    }
+
+    .title{
+        font-size: 5vw;
+    }
+    .time,
+    .score,
+    .type-correct {
+        font-size: 4.5vw;
+        /* text-align:; */
+    }
 }
 
 .complete{
@@ -264,6 +326,8 @@ ul {
 .click{
     pointer-events:auto;
 }
+
+
 
 .complete-text .word-display span.correct{
     color: rgb(0,115,208);
