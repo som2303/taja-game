@@ -1,3 +1,7 @@
+:root{
+    --onoff-main: rgb(252,185,19);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -164,18 +168,18 @@ body {
 
 .onoff{
     /* background-color: white; */
-    border:3px solid rgb(252,185,19);
+    border:3px solid var(--onoff-main);
 }
 .onoff button{
-    background-color: rgb(252,185,19);
+    background-color: var(--onoff-main);
     /* outline-color: ; */
-    border:2px solid rgb(252,185,19);
+    border:2px solid var(--onoff-main);
     color: white;
 }
 
 .onoff .name{
-    border-color: rgb(252,185,19);
-    color: rgb(252,185,19);
+    border-color: var(--onoff-main);
+    color: var(--onoff-main);
 }
 
 .complete{
