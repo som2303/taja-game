@@ -419,14 +419,10 @@ function checkMatch (){
     let charLength = nowInput.value.length-1;
     let typedChar = nowInput.value.split("")[charIndex];
     
-    
     if(charIndex<characters.length-1){
-        
-        if(typedChar == null){
-            // console.log("a")
+        if(typedChar == null){ // 삭제
             if(charLength>-1){
                 tajaNum--;
-                console.log(charLength);
             }else if(!isZero){
                 isZero=true;
                 tajaNum--;
@@ -435,18 +431,15 @@ function checkMatch (){
                 charIndex--;
                 if(characters[charIndex].classList.contains("incorrect") && mistakes>0){ 
                     mistakes--;
-                    
                 }
                 allWords--;
             }
             characters[charIndex].classList.remove("correct", "incorrect");
-            
-            //console.log(charIndex)
+
         }else{
             isZero=false;
             // startCount = true;
             tajaNum++;
-            // console.log("a")
             if(charIndex!=charLength){
                 if(characters[charIndex].innerText === typedChar){
                     characters[charIndex].classList.add("correct");
@@ -463,11 +456,10 @@ function checkMatch (){
         }
         characters.forEach(span => span.classList.remove("active")); //지나간 부분 active를 다 지우고
         characters[charIndex].classList.add("active")
-    }else if (window.event.key === 'Enter'){
+    }else if (window.event.key === 'Enter'){ // Enter 클릭
         isZero=true;
         nowIndex++;
         
-
         characters[charIndex].classList.remove("correct", "incorrect","active");
         if(characters[charIndex].innerText === typedChar){
             characters[charIndex].classList.add("correct");
@@ -476,20 +468,15 @@ function checkMatch (){
             mistakes++;
             allWords++;
             characters[charIndex].classList.add("incorrect");
-            // console.log(mistakes);
         }
-        if(nowIndex>=words.length){
+        if(nowIndex>=words.length){ // 게임 종료
             openPopup()
             nowIndex=0;
             isPlaying=false;
-
             // time = GAME_TIME;
             buttonChange('게임시작');/////////
             return;
         }
-        // score+=characters.length-mistakes;
-        // scoreDisplay.innerText = score;
-        // time = GAME_TIME;
         num++;
         charIndex=0;
         if(num===4){
@@ -506,37 +493,26 @@ function checkMatch (){
         typedChar = nowInput.value.split("")[charIndex];
         characters[charIndex].classList.add("active");
         
-        
-    }else{
+    }else{ // 입력 문자열을 넘어갔을 때
         nowInput.value = nowInput.value.substr(0, characters.length);
-        if(typedChar == null){
+        if(typedChar == null){ //삭제
             if(charIndex>-1){
                     tajaNum--;
-                    console.log(tajaNum);
                 }
-            // console.log("a")
             if(charIndex>charLength && charIndex>0){
                 characters[charIndex].classList.remove("correct", "incorrect", "active");
-                
                 charIndex--;
                 characters[charIndex].classList.remove("correct", "incorrect", "active");
                 characters[charIndex].classList.add("active")
                 if(characters[charIndex].classList.contains("incorrect") && mistakes>0){ 
                     mistakes--;
-                    
                 }
                 allWords--;
             }
-            
-            //console.log(charIndex)
-            
         }
-        
     }
-    allWords === 0 ? score=0:score=(allWords-mistakes)/allWords*100;
-    // score=(allWords-mistakes)/allWords*100;
-    console.log(tajaNum, mistakes)
-    scoreDisplay.innerText = Math.floor(tajaNum/time*60);
+    allWords === 0 ? score=0:score=(allWords-mistakes)/allWords*100; // 정확도
+    scoreDisplay.innerText = Math.floor(tajaNum/time*60); // 타자수
     typeCorrect.innerText = score.toFixed(1);
 }
 
