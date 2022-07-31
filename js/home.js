@@ -1,6 +1,7 @@
 let page = 1;
 let songs = [];
 const albumBtn = document.querySelector(".album_btn");
+const albumImgDisplay = document.querySelector(".album_img");
 const preScreen = document.getElementById("pre");
 const nextScreen = document.getElementById("next");
 const item = document.querySelector(".item");
@@ -18,8 +19,15 @@ preScreen.addEventListener("click", function(e){
     }
     // page--;
     // console.log(page)
-    albumBtn.classList.remove("disapear");
-    albumBtn.classList.add("disapear");
+    
+    console.log(page)
+    albumBtn.classList.remove("appear");
+    albumImgDisplay.classList.remove("img_appear");
+
+    setTimeout(() => {
+        albumBtn.classList.add("appear");
+        albumImgDisplay.classList.add("img_appear");
+    }, 10);
     itemDisplay();
     
 
@@ -32,9 +40,14 @@ nextScreen.addEventListener("click", function(e){
         page++;
     }
     // page--;
-    // console.log(page)
-    albumBtn.classList.remove("disapear");
-    albumBtn.classList.add("disapear");
+    console.log(page)
+    albumBtn.classList.remove("appear");
+    albumImgDisplay.classList.remove("img_appear");
+
+    setTimeout(() => {
+        albumBtn.classList.add("appear");
+        albumImgDisplay.classList.add("img_appear");
+    }, 10);
     itemDisplay();
     
 
