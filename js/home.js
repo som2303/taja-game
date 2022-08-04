@@ -19,8 +19,6 @@ preScreen.addEventListener("click", function(e){
     } else {
         page--;
     }
-    // page--;
-    // console.log(page)
     
     console.log(page)
     albumBtn.classList.remove("appear");
