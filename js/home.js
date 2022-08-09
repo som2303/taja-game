@@ -7,6 +7,8 @@ const preScreen = document.getElementById("pre");
 const nextScreen = document.getElementById("next");
 const item = document.querySelector(".item");
 const albumImg = document.querySelector(".album_img img");
+const outer = document.querySelector(".outer");
+const inner = document.querySelector(".inner");
 
 function setChildValue(index1,index2) {
     // window.location.href = `index.html?${index1}?${index2}`;
@@ -23,10 +25,14 @@ preScreen.addEventListener("click", function(e){
     console.log(page)
     albumBtn.classList.remove("appear");
     albumImgDisplay.classList.remove("img_appear");
+    outer.classList.remove("change");
+    inner.classList.remove("change");
     // section.classList.remove("change_bg");
     setTimeout(() => {
         albumBtn.classList.add("appear");
         albumImgDisplay.classList.add("img_appear");
+        outer.classList.add("change");
+        inner.classList.add("change");
         // section.classList.add("change_bg");
     }, 10);
     itemDisplay();
@@ -44,10 +50,14 @@ nextScreen.addEventListener("click", function(e){
     console.log(page)
     albumBtn.classList.remove("appear");
     albumImgDisplay.classList.remove("img_appear");
+    outer.classList.remove("change");
+    inner.classList.remove("change");
 
     setTimeout(() => {
         albumBtn.classList.add("appear");
         albumImgDisplay.classList.add("img_appear");
+        outer.classList.add("change");
+        inner.classList.add("change");
     }, 10);
     itemDisplay();
     
