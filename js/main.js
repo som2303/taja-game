@@ -21,7 +21,7 @@ const wordInput = document.querySelector('.word-input');
 const wordDisplay = document.querySelector('.word-display p');
 const wordList = document.querySelectorAll(".taja-list");
 
-const titleDisplay = document.querySelector('.title');
+const titleDisplay = document.querySelector('.top-bar');
 const scoreDisplay = document.querySelector('.score');
 const timeDisplayM = document.querySelector('.m');
 const timeDisplayS = document.querySelector('.s');
@@ -30,7 +30,7 @@ const button = document.querySelector('.button');
 
 const receivedData = location.href.split('?')[1];
 const receivedData2 = location.href.split('?')[2];
-const albumImage = document.querySelector('.bg-image');
+// const albumImage = document.querySelector('.bg-image');
 
 const target = document.querySelectorAll('.btn_open');
 const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
@@ -120,7 +120,7 @@ function paintImage(receive) {
         contents.classList.add("goosebumps-text");
     }
     // const image = new Image();
-    albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
+    // albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
     // image.classList.add("bgImage"); // image에 bgImage 클래스 추가 
     // header.appendChild(image); // body의 자식에 image추가
 }

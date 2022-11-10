@@ -13,8 +13,8 @@ const inner = document.querySelector(".inner");
 itemDisplay();
 
 function setChildValue(index1,index2) {
-    // window.location.href = `index.html?${index1}?${index2}`;
-    window.location.href = `indexcopy.html?${index1}?${index2}`;
+    window.location.href = `index.html?${index1}?${index2}`;
+    // window.location.href = `indexcopy.html?${index1}?${index2}`;
 }
 
 preScreen.addEventListener("click", function(e){
