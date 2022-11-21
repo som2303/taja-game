@@ -1,5 +1,6 @@
 let page = 1;
 let songs = [];
+// let textSize = 0;
 const albumBtn = document.querySelector(".album_btn");
 const albumImgDisplay = document.querySelector(".album-img img");
 const section = document.querySelector(".section");
@@ -9,9 +10,10 @@ const nextScreen = document.getElementById("right");
 const albumImg = document.querySelector(".album-img .album");
 const outer = document.querySelector(".contents");
 const inner = document.querySelector(".inner");
-
+const title = document.querySelector(".name span");
+// let name = '';
 itemDisplay();
-
+// setInterval(typing(name), 2000);
 function setChildValue(index1,index2) {
     window.location.href = `index.html?${index1}?${index2}`;
     // window.location.href = `indexcopy.html?${index1}?${index2}`;
@@ -34,6 +36,8 @@ preScreen.addEventListener("click", function(e){
         // albumBtn.classList.add("appear");
         // albumImgDisplay.classList.add("img_appear");
         outer.classList.add("change");
+        // textSize=0;
+        // title.innerHTML='';
         // inner.classList.add("change");
         // section.classList.add("change_bg");
     }, 10);
@@ -59,21 +63,31 @@ nextScreen.addEventListener("click", function(e){
         // albumBtn.classList.add("appear");
         // albumImgDisplay.classList.add("img_appear");
         outer.classList.add("change");
+        // textSize=0;
+        // title.innerHTML='';
         // inner.classList.add("change");
     }, 10);
     itemDisplay();
     
 
 })
-
+// function typing(name){
+//     if (textSize < name.length) {
+//     let txt = name.charAt(textSize);
+//     title.innerHTML += txt;
+//     textSize++;
+//     }
+// }
 function itemDisplay() {
     let songList = document.querySelector(".btn-box");
-    let title = document.querySelector(".items .name span");
+    // let name = '';
+    // let title = document.querySelector(".items .name span");
     songList.innerHTML="";
     let rink = "https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012";
     // item.classList.remove("onoff","complete","wemustlove","golive","spinoff","myname","cityofonf","popping","goosebumps");
     if (page===1) {
         title.innerHTML="ON/OFF";
+        // name = "ON/OFF";
         songs = [["ON/OFF",'onoff'], ["Difficult",'difficult'], ["If We Dream",'ifwedream'], 
         ["Original",'original'], ["Cat's Waltz",'catswaltz']];
         // item.classList.add("onoff");
@@ -133,8 +147,16 @@ function itemDisplay() {
         rink="https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351";
     }
     songs.forEach(span=>{
-        let spanTag = `<div class='btn-song' onclick="setChildValue('${span[1]}',${page})">:/> ${span[0]}</div>`;
+        let spanTag = `<div class='list-btn'><div class='list-tag'>:/> </div><div class='btn-song' onclick="setChildValue('${span[1]}',${page})">${span[0]}</div></div>`;
         songList.innerHTML+=spanTag;
     })
     albumImg.src=rink;
+    // function typing(){
+    //     if (textSize < name.length) {
+    //     let txt = name.charAt(textSize);
+    //     title.innerHTML += txt;
+    //     textSize++;
+    //     }
+    // }
+    
 }
