@@ -27,6 +27,8 @@ const timeDisplayM = document.querySelector('.m');
 const timeDisplayS = document.querySelector('.s');
 const typeCorrect = document.querySelector('.type-correct');
 const button = document.querySelector('.button');
+const i3 = document.querySelector('.i3');
+const i4 = document.querySelector('.i4');
 
 const receivedData = location.href.split('?')[1];
 const receivedData2 = location.href.split('?')[2];
@@ -512,8 +514,9 @@ function checkMatch (){
         }
     }
     allWords === 0 ? score=0:score=(allWords-mistakes)/allWords*100; // 정확도
-    scoreDisplay.innerText = Math.floor(tajaNum/time*60); // 타자수
+    scoreDisplay.innerText = Math.floor((tajaNum/time)*30); // 타자수
     typeCorrect.innerText = score.toFixed(1);
+    console.log(tajaNum,time);
 }
 
 // const target = document.querySelectorAll('.btn_open');
@@ -571,10 +574,21 @@ function countDown(){
     }
     timeDisplayM.innerText = Math.floor(time/60);
     timeDisplayS.innerText = time%60;
-    scoreDisplay.innerText = Math.floor(tajaNum/time*60);
+    scoreDisplay.innerText = Math.floor((tajaNum/time)*30);
 }
 
 function buttonChange(text) {
     button.innerText = text;
     text === '게임시작' ? button.classList.remove('loading') : button.classList.add('loading');
 }
+
+button.addEventListener('mouseover', function() {
+    i3.classList.remove("ready");
+    i4.classList.remove("ready");
+    button.classList.remove("ready");
+    setTimeout(() => {
+        i3.classList.add("ready");
+        i4.classList.add("ready");
+        button.classList.add("ready");
+    }, 10);
+});
