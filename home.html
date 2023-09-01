@@ -15,26 +15,39 @@
 </head>
 <body style="overflow-x: hidden">
     <div class="header">
-        <h1>타자연습</h1>
+        <div class="i1"></div>
+        <span>ONF</span>
     </div>
+    
     <div class="section">
         <div class="arrow">
-            <div id="left"></div>
+            <div id="left" style="font-size: 5rem; color: var(--main-color);"><</div>
         </div>
         <div class="contents-box">
+            <div class="lights-box">
+                <div class="lights-btn">
+                    <span>on</span>
+                    <div class="btn-line">
+                        <div class="btn"></div>
+                    </div>
+                    <span>off</span>
+                </div>
+            </div>
             <div class="top-bar">
                 <div class="close"></div>
             </div>
             <div class="contents">
                 <div class="all">
-                    <div class="name">
-                        <span></span>
+                    <div class="album-img">
+                        <img class="album"/>
                     </div>
-                    <div class="items">
                     
-                        <div class="album-img">
-                            <img class="album"/>
+                    <div class="items">
+                        <div class="name">
+                            <span></span>
                         </div>
+                        <div class="name-line"></div>
+
                         <div class="btn-box">
                         </div>
                     </div>
@@ -45,7 +58,7 @@
             <div class="bottom-bar"></div>
         </div>
         <div class="arrow">
-            <div id="right"></div>
+            <div id="right" style="font-size: 5rem; color: var(--main-color);">></div>
         </div>
 
         <!-- <input type="radio" name="slide" id="slide01" checked>
@@ -600,14 +613,34 @@
         </div>
     </div> -->
     
-    
-    <!-- <div>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div> -->
-    
+
+    </div> 
+    <div class="num-slide">
+        <div class="nums">
+            <!-- <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div> -->
+            <input type="radio" id="onoff" name="num" value="1" checked="checked" onclick='getPage(event)'><label for="onoff">1</label>
+            <input type="radio" id="complete" name="num" value="2" onclick='getPage(event)'><label for="complete">2</label>
+            <input type="radio" id="wemustlove" name="num" value="3" onclick='getPage(event)'><label for="wemustlove">3</label>
+            <input type="radio" id="golive" name="num" value="4" onclick='getPage(event)'><label for="golive">4</label>
+            <input type="radio" id="spinoff" name="num" value="5" onclick='getPage(event)'><label for="spinoff">5</label>
+            <input type="radio" id="myname" name="num" value="6" onclick='getPage(event)'><label for="myname">6</label>
+            <input type="radio" id="cityofonf" name="num" value="7" onclick='getPage(event)'><label for="cityofonf">7</label>
+            <input type="radio" id="popping" name="num" value="8" onclick='getPage(event)'><label for="popping">8</label>
+            <input type="radio" id="goosebumps" name="num" value="9" onclick='getPage(event)'><label for="goosebumps">9</label>
+            <!-- <input type="radio" id="storageofont" name="num"><label for="storageofont">2</label> -->
+            <!-- <input type="radio" id="complete" name="num"><label for="complete">2</label> -->
+       </div>
+       <div class="num-lines">
+            <div class="num-line" id="num-line"></div>
+       </div>
+    </div>
     <script src="js/home.js"></script>
 </html>

@@ -6,11 +6,13 @@ const albumImgDisplay = document.querySelector(".album-img img");
 const section = document.querySelector(".section");
 const preScreen = document.getElementById("left");
 const nextScreen = document.getElementById("right");
+const numLine = document.getElementById("num-line");
 // const item = document.querySelector(".item");
 const albumImg = document.querySelector(".album-img .album");
 const outer = document.querySelector(".contents");
 const inner = document.querySelector(".inner");
 const title = document.querySelector(".name span");
+const num = document.getElementsByName('num');
 // let name = '';
 itemDisplay();
 // setInterval(typing(name), 2000);
@@ -71,6 +73,16 @@ nextScreen.addEventListener("click", function(e){
     
 
 })
+
+
+function getPage(event) {
+    page = Number(event.target.value);
+    outer.classList.remove("change");
+    setTimeout(() => {
+        outer.classList.add("change");
+    }, 10);
+    itemDisplay();
+}
 // function typing(name){
 //     if (textSize < name.length) {
 //     let txt = name.charAt(textSize);
@@ -79,6 +91,17 @@ nextScreen.addEventListener("click", function(e){
 //     }
 // }
 function itemDisplay() {
+    // const numLine = document.getElementById(".num-line");
+    numLine.style.transform="translateX("+(page-1)*100+"%)";
+    numLine.style.transition=" all 1s" 
+    for(var i=0; i < num.length; i++) {
+        num[i].checked = false; 
+    }
+    num[page-1].checked = true;
+    
+    // numLine.animate([
+    //     { left:"{0}%".format(page*10),  }
+    // ], 1000);
     let songList = document.querySelector(".btn-box");
     // let name = '';
     // let title = document.querySelector(".items .name span");

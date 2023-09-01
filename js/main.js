@@ -21,7 +21,8 @@ const wordInput = document.querySelector('.word-input');
 const wordDisplay = document.querySelector('.word-display p');
 const wordList = document.querySelectorAll(".taja-list");
 
-const titleDisplay = document.querySelector('.top-bar');
+const titleDisplay = document.querySelector('.title');
+const deco = document.querySelector('.info-deco');
 const scoreDisplay = document.querySelector('.score');
 const timeDisplayM = document.querySelector('.m');
 const timeDisplayS = document.querySelector('.s');
@@ -50,7 +51,8 @@ function init(){
     buttonChange("게임 로딩중");
     getWords();
     setText();
-    paintImage(receivedData2);
+    getDeco(receivedData2);
+    // paintImage(receivedData2);
     // charIndex = 0;
     
     // wordInput.addEventListener('onkeydown', checkMatch);
@@ -86,45 +88,68 @@ function checkStatus(){
 
 // const header = document.querySelector(".header");
 
-function paintImage(receive) {
-    let rink = "url('https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012')"
-    if (receive==='2'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515')"
-        header.classList.add("complete");
-        contents.classList.add("complete-text");
-    }else if (receive==='3'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
-        header.classList.add("wemustlove");
-        contents.classList.add("wemustlove-text");
-    }else if (receive==='4'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516')"
-        header.classList.add("golive");
-        contents.classList.add("golive-text");
-    }else if (receive==='5'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519')"
-        header.classList.add("spinoff");
-        contents.classList.add("spinoff-text");
-    }else if (receive==='6'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509')"
-        header.classList.add("myname");
-        contents.classList.add("myname-text");
-    }else if (receive==='7'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952')"
-        header.classList.add("cityofonf");
-        contents.classList.add("cityofonf-text");
-    }else if (receive==='8'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516')"
-        header.classList.add("popping");
-        contents.classList.add("popping-text");
-    }else if (receive==='9'){
-        rink="url('https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351')"
-        header.classList.add("goosebumps");
-        contents.classList.add("goosebumps-text");
+// function paintImage(receive) {
+//     let rink = "url('https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012')"
+//     if (receive==='2'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515')"
+//         header.classList.add("complete");
+//         contents.classList.add("complete-text");
+//     }else if (receive==='3'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
+//         header.classList.add("wemustlove");
+//         contents.classList.add("wemustlove-text");
+//     }else if (receive==='4'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516')"
+//         header.classList.add("golive");
+//         contents.classList.add("golive-text");
+//     }else if (receive==='5'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519')"
+//         header.classList.add("spinoff");
+//         contents.classList.add("spinoff-text");
+//     }else if (receive==='6'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509')"
+//         header.classList.add("myname");
+//         contents.classList.add("myname-text");
+//     }else if (receive==='7'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952')"
+//         header.classList.add("cityofonf");
+//         contents.classList.add("cityofonf-text");
+//     }else if (receive==='8'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516')"
+//         header.classList.add("popping");
+//         contents.classList.add("popping-text");
+//     }else if (receive==='9'){
+//         rink="url('https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351')"
+//         header.classList.add("goosebumps");
+//         contents.classList.add("goosebumps-text");
+//     }
+//     // const image = new Image();
+//     // albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
+//     // image.classList.add("bgImage"); // image에 bgImage 클래스 추가 
+//     // header.appendChild(image); // body의 자식에 image추가
+// }
+
+function getDeco(){
+    if(receivedData2==='1'){
+        deco.innerText='1st mini album\non/off';
+    }else if(receivedData2==='2'){
+        deco.innerText='2th mini Album\nyou\ncomplete\nme';
+    }else if(receivedData2==='3'){
+        deco.innerText='3rd mini Album\nwe\nmust\nlove';
+    }else if(receivedData2==='4'){
+        deco.innerText='4th mini Album\ngo live';
+    }else if(receivedData2==='5'){
+        deco.innerText='5th mini Album\nspin off';
+    }else if(receivedData2==='6'){
+        deco.innerText='the first album\nonf:my name '
+    }else if(receivedData2==='7'){
+        deco.innerText='first rpackage album\ncity of onf '
+    }else if(receivedData2==='8'){
+        deco.innerText='summer popup album\npopping';
+    }else if(receivedData2==='9'){
+        deco.innerText='6th mini album\ngooosebumps';
     }
-    // const image = new Image();
-    // albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
-    // image.classList.add("bgImage"); // image에 bgImage 클래스 추가 
-    // header.appendChild(image); // body의 자식에 image추가
+    // deco.innerText='special album\nstorage of onf'
 }
 
 function getWords(){
@@ -153,15 +178,15 @@ function getWords(){
     }else if(receivedData==="complete"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.complete
-        titleDisplay.innerText='Complete\n(널 만난 순간)'
+        titleDisplay.innerText='Complete (널 만난 순간)'
     }else if(receivedData==="flymetothemoon"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.flymetothemoon
-        titleDisplay.innerText='Fly Me To\nThe Moon'
+        titleDisplay.innerText='Fly Me To The Moon'
     }else if(receivedData==="goodmorning"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.goodmorning
-        titleDisplay.innerText='아침\n(Good Morning)'
+        titleDisplay.innerText='아침 (Good Morning)'
     }else if(receivedData==="fiftyfifty"){
         const songs = JSON.parse(JSON.stringify(albumList2));
         words = songs.fiftyfifty
@@ -185,7 +210,7 @@ function getWords(){
     }else if(receivedData==="yayaya"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.yayaya
-        titleDisplay.innerText='별일 아냐\n(Yayaya)'
+        titleDisplay.innerText='별일 아냐 (Yayaya)'
     }else if(receivedData==="happilyneverafter"){
         const songs = JSON.parse(JSON.stringify(albumList3));
         words = songs.happilyneverafter
