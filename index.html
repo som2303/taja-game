@@ -13,7 +13,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </head>
 <body style>
-    <div class="header">
+    <div class="header light-on">
         <div class="top-i1"></div>
         <div class="title"></span>
     </div>
@@ -24,9 +24,9 @@
             <div class="circle i1">
                     <div class="circle i2">
                         <div class="circle i3">
-                           
+                           <div class="circle i4"></div> 
                         </div>
-                        <div class="circle i4"></div> 
+                        
                     </div>
                 </div>
                 
@@ -44,7 +44,10 @@
                             <div class="box2">
                                 <span>time</span>
                                 <div>
-                                    <span class="time m">0</span>m <span class="time s">0</span>s
+                                    <div class="info-text">
+                                       <span class="time m">0</span>m <span class="time s">0</span>s 
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -109,12 +112,12 @@
                                 <input onkeyup="checkMatch();" type="text" spellcheck="false" class="word-input"/>
                             </div>
                         </li>
-                        <a href="#pop_info" class="btn_open" style="display:none;">팝업 열기1</a>
+                        <!-- <a href="#pop_info" class="btn_open" style="display:none;">팝업 열기1</a>
                         <div id="pop_info" class="pop_wrap" style="display:none;">
                             <div class="pop_inner">
                                 <p class="pop_message"></p>
                             <button type="button" class="btn_close" onclick="closePopup()">홈으로</button>
-                        </div>
+                        </div> -->
                     </ul>
                 </div>
             </div>
@@ -218,7 +221,33 @@
         </div> -->
         
     </div>
-    
+    <div class="popup ">
+        <div class="popup-contents light-on">
+            <div class="top-bar">
+            <div class="close"></div>
+            </div>
+            <div class="results popup-light">
+                <div class="result">
+                    >time: <span class="r-m">0</span>m <span class="r-s">0</span>s
+                </div>
+                <div class="result">
+                    >score: <span class="r-score">0</span>
+                </div>
+                <div class="result">
+                    >accuracy: <span class="r-accuracy">0</span>%
+                </div>
+                <div class="btns">
+                    <div class="home" onclick="home()">home</div>
+                    <div class="again" onclick="again()">agine</div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+
+        
+            
+        </div>
     <script src="json/onoff.json"></script>
     <script src="json/complete.json"></script>
     <script src="json/wemustlove.json"></script>

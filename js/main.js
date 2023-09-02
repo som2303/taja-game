@@ -28,11 +28,19 @@ const timeDisplayM = document.querySelector('.m');
 const timeDisplayS = document.querySelector('.s');
 const typeCorrect = document.querySelector('.type-correct');
 const button = document.querySelector('.button');
+const i2 = document.querySelector('.i2');
 const i3 = document.querySelector('.i3');
 const i4 = document.querySelector('.i4');
 
+const popup = document.querySelector('.popup');
+const r_time_m = document.querySelector('.r-m');
+const r_time_s = document.querySelector('.r-s');
+const r_score = document.querySelector('.r-score');
+const r_accuracy = document.querySelector('.r-accuracy');
+
 const receivedData = location.href.split('?')[1];
 const receivedData2 = location.href.split('?')[2];
+const receivedData3 = location.href.split('?')[3];
 // const albumImage = document.querySelector('.bg-image');
 
 const target = document.querySelectorAll('.btn_open');
@@ -41,10 +49,10 @@ const popMessage = document.querySelector('.pop_message');
 
 const header = document.querySelector('.header');
 const contents = document.querySelector('.contents');
+const popup_contents = document.querySelector('.popup-contents');
+const results = document.querySelector('.results');
 
 init();
-// window.onkeydown = (e) => console.log(e);
-
 
 
 function init(){
@@ -52,11 +60,17 @@ function init(){
     getWords();
     setText();
     getDeco(receivedData2);
-    // paintImage(receivedData2);
-    // charIndex = 0;
-    
-    // wordInput.addEventListener('onkeydown', checkMatch);
-    
+    if(receivedData3==='1'){
+        header.classList.add('light-on');
+        popup_contents.classList.add('light-on');
+        results.classList.add('popup-light');
+
+    } else {
+        header.classList.remove('light-on');
+        popup_contents.classList.remove('light-on');
+        results.classList.remove('popup-light');
+
+    }
 }
 
 function run()
@@ -86,68 +100,29 @@ function checkStatus(){
     }
 }
 
-// const header = document.querySelector(".header");
-
-// function paintImage(receive) {
-//     let rink = "url('https://musicmeta-phinf.pstatic.net/album/002/117/2117435.jpg?type=r360Fll&v=20220524212012')"
-//     if (receive==='2'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/002/463/2463403.jpg?type=r360Fll&v=20220514062515')"
-//         header.classList.add("complete");
-//         contents.classList.add("complete-text");
-//     }else if (receive==='3'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/002/835/2835389.jpg?type=r360Fll&v=20220518133519')"
-//         header.classList.add("wemustlove");
-//         contents.classList.add("wemustlove-text");
-//     }else if (receive==='4'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/003/207/3207334.jpg?type=r360Fll&v=20220518190516')"
-//         header.classList.add("golive");
-//         contents.classList.add("golive-text");
-//     }else if (receive==='5'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/004/775/4775212.jpg?type=r360Fll&v=20220518133519')"
-//         header.classList.add("spinoff");
-//         contents.classList.add("spinoff-text");
-//     }else if (receive==='6'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/005/246/5246781.jpg?type=r360Fll&v=20220523110509')"
-//         header.classList.add("myname");
-//         contents.classList.add("myname-text");
-//     }else if (receive==='7'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/005/739/5739003.jpg?type=r360Fll&v=20220517100952')"
-//         header.classList.add("cityofonf");
-//         contents.classList.add("cityofonf-text");
-//     }else if (receive==='8'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/006/274/6274369.jpg?type=r360Fll&v=20220106082516')"
-//         header.classList.add("popping");
-//         contents.classList.add("popping-text");
-//     }else if (receive==='9'){
-//         rink="url('https://musicmeta-phinf.pstatic.net/album/006/714/6714873.jpg?type=r360Fll&v=20220410180351')"
-//         header.classList.add("goosebumps");
-//         contents.classList.add("goosebumps-text");
-//     }
-//     // const image = new Image();
-//     // albumImage.style.backgroundImage=rink;// = imgNumber; // 가져올 image경로 지정
-//     // image.classList.add("bgImage"); // image에 bgImage 클래스 추가 
-//     // header.appendChild(image); // body의 자식에 image추가
-// }
 
 function getDeco(){
     if(receivedData2==='1'){
-        deco.innerText='1st mini album\non/off';
+        deco.innerText='1st\nmini album\non/off';
     }else if(receivedData2==='2'){
-        deco.innerText='2th mini Album\nyou\ncomplete\nme';
+        deco.innerText='2th\nmini Album\nyou\ncomplete me';
+        deco.style.fontSize="1rem"
     }else if(receivedData2==='3'){
-        deco.innerText='3rd mini Album\nwe\nmust\nlove';
+        deco.innerText='3rd\nmini Album\nwe\nmust love';
+        deco.style.fontSize="1rem"
     }else if(receivedData2==='4'){
-        deco.innerText='4th mini Album\ngo live';
+        deco.innerText='4th\nmini Album\ngo live';
     }else if(receivedData2==='5'){
-        deco.innerText='5th mini Album\nspin off';
+        deco.innerText='5th\nmini Album\nspin off';
     }else if(receivedData2==='6'){
-        deco.innerText='the first album\nonf:my name '
+        deco.innerText='the first album\nonf:my name'
     }else if(receivedData2==='7'){
-        deco.innerText='first rpackage album\ncity of onf '
+        deco.innerText='first\nrpackage\nalbum\ncity of onf'
+        deco.style.fontSize="1rem"
     }else if(receivedData2==='8'){
         deco.innerText='summer popup album\npopping';
     }else if(receivedData2==='9'){
-        deco.innerText='6th mini album\ngooosebumps';
+        deco.innerText='6th\nmini album\ngooosebumps';
     }
     // deco.innerText='special album\nstorage of onf'
 }
@@ -468,7 +443,7 @@ function checkMatch (){
             // startCount = true;
             tajaNum++;
             if(charIndex!=charLength){
-                if(characters[charIndex].innerText === typedChar){
+                if(characters[charIndex].innerText.toUpperCase() === typedChar.toUpperCase()){
                     characters[charIndex].classList.add("correct");
                     allWords++;
                 }else{
@@ -488,7 +463,7 @@ function checkMatch (){
         nowIndex++;
         
         characters[charIndex].classList.remove("correct", "incorrect","active");
-        if(characters[charIndex].innerText === typedChar){
+        if(characters[charIndex].innerText.toUpperCase() === typedChar.toUpperCase()){
             characters[charIndex].classList.add("correct");
             allWords++;
         }else{
@@ -497,6 +472,7 @@ function checkMatch (){
             characters[charIndex].classList.add("incorrect");
         }
         if(nowIndex>=words.length){ // 게임 종료
+
             openPopup()
             nowIndex=0;
             isPlaying=false;
@@ -554,27 +530,32 @@ function openPopup(){
     // timeDisplayS.innerText = time%60;
     // scoreDisplay.
     // targetID = this.getAttribute('href');
-    popMessage.innerText="연습시간: "+timeDisplayM.value+'분'
-    document.querySelector("#pop_info").style.display = 'block';
+    // popMessage.innerText="연습시간: "+timeDisplayM.value+'분'
+    r_time_m.innerText=Math.floor(time / 60);
+    r_time_s.innerText=time % 60;
+    r_score.innerText=Math.floor((tajaNum/time)*30);
+    r_accuracy.innerText=score.toFixed(1);
+    popup.classList.remove("hide");
+    // document.querySelector("#pop_info").style.display = 'block';
 }
-function closePopup(){
-    let thisUrl = document.URL;
-    let snsTitle = "2021 웹진 [봄]";
-    document.querySelector("#pop_info").style.display = 'none';
-    const url = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
-    window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
-    // window.location.href = `home.html`;
-}
+// function closePopup(){
+//     let thisUrl = document.URL;
+//     let snsTitle = "2021 웹진 [봄]";
+//     document.querySelector("#pop_info").style.display = 'none';
+//     const url = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
+//     window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
+//     // window.location.href = `home.html`;
+// }
 
 
 // 팝업 열기
-for(let i = 0; i < target.length; i++){
-    target[i].addEventListener('click', function(){
-        targetID = this.getAttribute('href');
-        popMessage.innerText="연습시간: "+timeDisplayM.innerText+'분'+timeDisplayS.innerText+'초\n'+"타자: "+scoreDisplay.innerText+"타\n"+"정확도: "+typeCorrect.innerText+"%"
-        document.querySelector(targetID).style.display = 'block';
-    });
-}
+// for(let i = 0; i < target.length; i++){
+//     target[i].addEventListener('click', function(){
+//         targetID = this.getAttribute('href');
+//         popMessage.innerText="연습시간: "+timeDisplayM.innerText+'분'+timeDisplayS.innerText+'초\n'+"타자: "+scoreDisplay.innerText+"타\n"+"정확도: "+typeCorrect.innerText+"%"
+//         document.querySelector(targetID).style.display = 'block';
+//     });
+// }
 
 // 팝업 닫기
 // for(let j = 0; j < target.length; j++){
@@ -608,12 +589,32 @@ function buttonChange(text) {
 }
 
 button.addEventListener('mouseover', function() {
+    i2.classList.remove("ready");
     i3.classList.remove("ready");
     i4.classList.remove("ready");
-    button.classList.remove("ready");
+    // button.classList.remove("ready");
     setTimeout(() => {
+        i2.classList.add("ready");
         i3.classList.add("ready");
         i4.classList.add("ready");
-        button.classList.add("ready");
+        // button.classList.add("ready");
     }, 10);
+    
 });
+
+button.addEventListener('mouseout', function() {
+    i2.classList.remove("ready");
+    i3.classList.remove("ready");
+    i4.classList.remove("ready");
+    
+});
+
+function again() {
+    window.location.href = `index.html?${receivedData}?${receivedData2}`;
+    // window.location.href = `indexcopy.html?${index1}?${index2}`;
+}
+
+function home() {
+    window.location.href = `home.html?${receivedData2}?${receivedData3}`;
+    // window.location.href = `indexcopy.html?${index1}?${index2}`;
+}

@@ -1,5 +1,6 @@
 let page = 1;
 let songs = [];
+let check = 1;
 // let textSize = 0;
 const albumBtn = document.querySelector(".album_btn");
 const albumImgDisplay = document.querySelector(".album-img img");
@@ -13,13 +14,77 @@ const outer = document.querySelector(".contents");
 const inner = document.querySelector(".inner");
 const title = document.querySelector(".name span");
 const num = document.getElementsByName('num');
+
+const on = document.querySelector('.on');
+const off = document.querySelector('.off');
+const btn = document.querySelector('.btn');
+
+const receivedData = location.href.split('?')[1];
+const receivedData2 = location.href.split('?')[2];
+
+const checkbox = document.querySelector('.checkbox');
+const header = document.querySelector('.header');
+const num_slide = document.querySelector('.num-slide');
+
+
+if(receivedData!=null){
+    page=Number(receivedData);
+}
+check = receivedData2
+
+console.log(checkbox.checked);
+// if(checkbox.checked==false){
+//     header.classList.add("light-on");
+//     num_slide.classList.add("light-on");
+//     check = 1;
+// } else {
+//     header.classList.remove("light-on");
+//     num_slide.classList.remove("light-on");
+//     check = 0;
+// }
+if(receivedData2==='0'){
+    header.classList.remove("light-on");
+    num_slide.classList.remove("light-on");
+    checkbox.checked=true;
+    console.log(checkbox.checked);
+    check = '0';
+}
+
+function is_checked() {
+  
+    // 2. checked 속성을 체크합니다.
+    if(checkbox.checked==false){
+        header.classList.add("light-on");
+        num_slide.classList.add("light-on");
+        check = 1;
+    } else {
+        header.classList.remove("light-on");
+        num_slide.classList.remove("light-on");
+        check = 0;
+    }
+    console.log(checkbox.checked);
+    history.pushState(null, null, "?"+String(page)+"?"+check);
+    // 3. 결과를 출력합니다.
+    
+    
+}
+
+// history.pushState(null, null, location.href); 
+
+// window.onpopstate = function() { 
+// 	window.location.href = `home.html?${page}`; 
+// }
 // let name = '';
 itemDisplay();
 // setInterval(typing(name), 2000);
 function setChildValue(index1,index2) {
-    window.location.href = `index.html?${index1}?${index2}`;
+    window.location.href = `index.html?${index1}?${index2}?${check}`;
     // window.location.href = `indexcopy.html?${index1}?${index2}`;
 }
+
+// function changePage() {
+//     window.location.href = `home.html?${page}`;
+// }
 
 preScreen.addEventListener("click", function(e){
     if (page === 1){
@@ -77,6 +142,7 @@ nextScreen.addEventListener("click", function(e){
 
 function getPage(event) {
     page = Number(event.target.value);
+    
     outer.classList.remove("change");
     setTimeout(() => {
         outer.classList.add("change");
@@ -91,7 +157,10 @@ function getPage(event) {
 //     }
 // }
 function itemDisplay() {
+    history.pushState(null, null, "?"+String(page)+"?"+check);
+    // window.location.href = `home.html?${page}`;
     // const numLine = document.getElementById(".num-line");
+    // history.pushState(null, null, string(page));
     numLine.style.transform="translateX("+(page-1)*100+"%)";
     numLine.style.transition=" all 1s" 
     for(var i=0; i < num.length; i++) {
