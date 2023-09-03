@@ -60,16 +60,15 @@ function init(){
     getWords();
     setText();
     getDeco(receivedData2);
-    if(receivedData3==='1'){
-        header.classList.add('light-on');
-        popup_contents.classList.add('light-on');
-        results.classList.add('popup-light');
-
-    } else {
+    if(receivedData3==='0'){
         header.classList.remove('light-on');
         popup_contents.classList.remove('light-on');
         results.classList.remove('popup-light');
 
+    } else {
+        header.classList.add('light-on');
+        popup_contents.classList.add('light-on');
+        results.classList.add('popup-light');
     }
 }
 
